@@ -16,13 +16,13 @@ public class MainApp {
 	public static void main(String[] args) {
 		
 		String inputFancyFriday,inputSunny, inputRaining;
-		 boolean fancyfriday=false;
+		 boolean fancyFriday=false;
 		 boolean sunny= false;
 		 boolean raining = false;
 		
 		// Get input from user
 		Scanner input = new Scanner(System.in);
-		System.out.println("Is it fancy friday?");
+		System.out.println("Is it fancyFriday?");
 		inputFancyFriday = input.nextLine();
 		
 		System.out.println("Is it sunny?");
@@ -36,7 +36,7 @@ public class MainApp {
 		
 		//Set condition variables base on input
 		if (inputFancyFriday.equalsIgnoreCase("yes")){
-			fancyfriday = true;
+			fancyFriday = true;
 		}
 		
 		if (inputSunny.equalsIgnoreCase("yes")){
@@ -46,12 +46,22 @@ public class MainApp {
 			raining = true;
 		}
 		//test if the variable are working properly
-		//System.out.println(fancyfriday + "" + sunny + "" + raining);
+		//System.out.println(fancyFriday + "" + sunny + "" + raining);
 				
 		
 		
 		// use if statement to decide what to wear
-		
+		if(fancyFriday){
+			if(sunny){
+		   	 System.out.println("tea gown");
+			}else if(raining){
+				 System.out.println("power suit");
+			}else{
+				 System.out.println("long gown");
+			}
+		}else{
+			System.out.println("tshirt and jeans");
+		}
 		
 
 	}
